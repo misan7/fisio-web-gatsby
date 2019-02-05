@@ -1,0 +1,109 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/home/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - label: "Template Key"
+            name: "templateKey"
+            widget: "hidden"
+            default: "home"
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Carousel"
+            name: "carousel"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "markdown"}
+              - {label: "Subtitle", name: "subtitle", widget: "markdown"}
+              - {label: "Image", name: "image", widget: "image"}
+          - label: "Services"
+            name: "servicesList"
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "markdown"
+              - label: "Subtitle"
+                name: "subtitle"
+                widget: "markdown"
+              - label: "Products"
+                name: "products"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "markdown"}
+                  - {label: "Subtitle", name: "subtitle", widget: "markdown"}
+                  - {label: "Link", name: "linkpath", widget: "string"}
+                  - {label: "Image", name: "image", widget: "image"}
+          - label: "Gallery"
+            name: "galleryList"
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "markdown"
+              - label: "Subtitle"
+                name: "subtitle"
+                widget: "markdown"
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "markdown"}
+                  - {label: "Image", name: "image", widget: "image"}
+          - label: "Collaborators"
+            name: "collaborators"
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "markdown"
+              - label: "Subtitle"
+                name: "subtitle"
+                widget: "markdown"
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "markdown"}
+                  - {label: "Image", name: "image", widget: "image"}
+      - file: "src/pages/privacy-policy/index.md"
+        label: "Privacy Policy"
+        name: "privacy-policy"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "privacy-policy"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/service/index.md"
+        label: "Service Page"
+        name: "service"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "service-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Heading", name: "heading", widget: "string"}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Services", name: "services", widget: "list", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Image", name: "image", widget: "image"}, {label: "Products", name: "products", widget: "list", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Price", name: "price", widget: "string"}, {label: "Content", name: "content", widget: "text"}]}]}

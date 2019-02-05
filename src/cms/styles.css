@@ -1,0 +1,140 @@
+/* CONTAINERS */
+
+.nc-app-main,
+.nc-appHeader-content,
+.nc-entryEditor-container {
+  max-width: 100% !important;
+}
+
+/* HIDE ELEMENTS */
+
+.nc-entryEditor-toolbar-backSection > div + div,
+.nc-entryEditor-toolbar-metaSection,
+.nc-collectionPage-topHeading,
+.nc-collectionPage-sidebarHeading,
+.nc-appHeader-actions .nc-dropdown:first-of-type,
+.nc-collectionPage-top-viewControls {
+  display: none !important;
+}
+
+/* COLLECTION OVERVIEW */
+
+.nc-collectionPage-container {
+  margin: 84px 28px !important;
+}
+
+.nc-collectionPage-top {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  display: flex !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  width: auto !important;
+  margin-bottom: 0 !important;
+}
+
+.nc-collectionPage-top-row {
+  margin: 0 !important;
+}
+
+.nc-collectionPage-topNewButton {
+  margin-bottom: 18px !important;
+}
+
+.nc-entryListing-listCard {
+  width: 100% !important;
+}
+
+.nc-collectionPage-sidebarLink:first-of-type {
+  margin-top: 8px !important;
+}
+
+/* ENTRY TOOLBAR */
+
+.nc-entryEditor-toolbar {
+  height: 56px !important;
+  box-shadow: none !important;
+  padding-right: 100px !important;
+}
+
+.nc-entryEditor-toolbar-backArrow {
+  margin-right: 0 !important;
+}
+
+.nc-entryEditor-containerOuter {
+  padding-top: 56px !important;
+}
+
+.nc-entryEditor-toolbar-statusPublished,
+.nc-entryEditor-toolbar-deleteButton,
+.nc-entryEditor-toolbar-saveButton {
+  margin: 0 0 0 10px !important;
+}
+
+.nc-entryEditor-toolbar-mainSection {
+  justify-content: flex-end !important;
+}
+
+.nc-entryEditor-viewControls {
+  position: fixed !important;
+  right: 10px !important;
+  top: 8px !important;
+  z-index: 999 !important;
+  display: flex !important;
+}
+
+.nc-entryEditor-viewControls button {
+  margin-left: 8px !important;
+}
+
+/* ENTRY */
+
+.nc-entryEditor-noPreviewEditorContainer,
+.SplitPane {
+  background-color: transparent !important;
+}
+
+.Resizer.vertical {
+  width: 1px !important;
+  background-color: #dfdfe3 !important;
+}
+
+.nc-entryEditor-previewPane {
+  overflow-y: hidden !important;
+}
+
+.nc-controlPane-label,
+.nc-controlPane-label:after {
+  background-color: transparent !important;
+}
+
+.nc-controlPane-label {
+  padding: 3px 0 !important;
+}
+
+.nc-controlPane-labelActive {
+  color: inherit !important;
+}
+
+.nc-controlPane-widget {
+  border-radius: 5px !important;
+}
+
+.nc-listControl-objectLabel {
+  border: 1px solid #dfdfe3 !important;
+  background-color: transparent !important;
+}
+
+.nc-listControl-objectControl {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.nc-controlPane-control:first-child {
+  margin-top: 0 !important;
+}
+
+.nc-objectControl-root {
+  padding-bottom: 16px !important;
+}
